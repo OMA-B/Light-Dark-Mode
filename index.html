@@ -4,24 +4,71 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="assets/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome.min.css">
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="colors.css">
     <title>Light Dark Mode</title>
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navigator">
-        <a href="#Home" class="home">HOME</a>
-        <a href="#About" class="about">ABOUT</a>
-        <a href="#Projects" class="projects">PROJECTS</a>
-        <a href="#Contact" class="contact">CONTACT</a>
-    </nav>
+        <a href="#Home">HOME</a>
+        <a href="#About">ABOUT</a>
+        <!-- Light and Dark Mode Switch -->
+        <div class="mode-switch">
+            <div class="switch">
+                <i class="fa-solid fa-sun icon"></i>
+            </div>
+        </div><!-- Light and Dark Mode Switch -->
+        <a href="#Projects">PROJECTS</a>
+        <a href="#Contact">CONTACT</a>
+    </nav><!-- Navigation -->
     <!-- Home -->
+    <header class="header" id="Home">
+        <h1 class="title">Custom Title Here</h1>
+        <h3 class="subtitle">Welcome to the website</h3>
+    </header><!-- Home -->
     <!-- About -->
+    <section class="about" id="About">
+        <h1 class="title">Undraw Illustrations</h1>
+
+        <div class="illustrations">
+            <div class="img-set img-case1">
+                <h3 class="text1">Web Innovation</h3>
+                <img src="assets/img/undraw_code_review_light.svg" alt="code review window illustration" class="image1">
+            </div>
+            <div class="img-set img-case2">
+                <h3 class="text2">Problem Solving</h3>
+                <img src="assets/img/undraw_code_thinking_light.svg" alt="thinking figure beside a laptop illustration" class="image2">
+            </div>
+            <div class="img-set img-case3">
+                <h3 class="text3">High Concept</h3>
+                <img src="assets/img/undraw_version_control_light.svg" alt="version control coding illustration" class="image3">
+            </div>
+        </div>
+    </section><!-- About -->
     <!-- Projects -->
+    <section class="projects" id="Projects">
+        <h1 class="title">Buttons</h1>
+
+        <div class="buttons">
+            <button class="button1">Primary</button>
+            <button class="button2">Secondary</button>
+            <button class="button3">Disabled</button>
+            <button class="button4">Outline</button>
+            <button class="button5">Alt Outline</button>
+            <button class="button6">Disabled</button>
+        </div>
+        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem reprehenderit aut provident quod in maxime ipsam quam laborum vel, quas eveniet excepturi natus deserunt officia eos aliquid, vitae minima tempore expedita iure voluptate? Commodi beatae culpa rem! Minus, repudiandae ipsa?</p>
+    </section><!-- Projects -->
     <!-- Contacts -->
-    
+    <div class="contact-icons" id="Contact">
+        <i class="fa-brands fa-github"></i>
+        <i class="fa-brands fa-codepen"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-linkedin-in"></i>
+        <i class="fa-brands fa-youtube"></i>
+    </div><!-- Contacts -->
 </body>
 </html>
