@@ -1,3 +1,6 @@
+const darkMode = 'dark';
+const lightMode = 'light';
+
 // Grabbing elements
 const switchBtn = document.querySelector('.checkbox');
 const images = document.querySelectorAll('.illustrations img');
@@ -12,26 +15,26 @@ const changeImage = (color) => {
 }
 
 // to check for light or dark mode
-const darkOrLightMode = (isItDark) => {
-    switchBox.style.background = isItDark ? 'rgb(150 65 255 / 80%)' : 'rgb(0 0 0 / 50%)';
-    isItDark ? changeImage('dark') : changeImage('light');
+const darkOrLightMode = (mode) => {
+    switchBox.style.background = mode === 'dark' ? 'rgb(150 65 255 / 80%)' : 'rgb(0 0 0 / 50%)';
+    mode === 'dark' ? changeImage(darkMode) : changeImage(lightMode);
     // changing and customizing the icon to moon
-    isItDark ? switchIcon.classList.replace('fa-sun', 'fa-moon') : switchIcon.classList.replace('fa-moon', 'fa-sun');
-    isItDark ? switchIcon.style.color = '#121212' : switchIcon.style.color = '#FF5C5C';
+    mode === 'dark' ? switchIcon.classList.replace('fa-sun', 'fa-moon') : switchIcon.classList.replace('fa-moon', 'fa-sun');
+    mode === 'dark' ? switchIcon.style.color = '#121212' : switchIcon.style.color = '#FF5C5C';
 }
 
 // The switch event
 const switchTheme = (event) => {
     if (event.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        darkOrLightMode(true);
+        document.documentElement.setAttribute('data-theme', darkMode);
+        darkOrLightMode(darkMode);
         // remember switched state
-        localStorage.setItem('theme', 'dark');
+        localStorage.setItem('theme', darkMode);
     } else {
-        document.documentElement.setAttribute('data-theme', 'light');
-        darkOrLightMode(false);
+        document.documentElement.setAttribute('data-theme', lightMode);
+        darkOrLightMode(lightMode);
         // remember switched state
-        localStorage.setItem('theme', 'light');
+        localStorage.setItem('theme', lightMode);
     }
 }
 
@@ -46,6 +49,6 @@ if (currentTheme) {
 
     if (currentTheme === 'dark') {
         switchBtn.checked = true;
-        darkOrLightMode(true);
+        darkOrLightMode(darkMode);
     }
 }
